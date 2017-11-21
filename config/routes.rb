@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'tasks/show'
-
-  get 'tasks/new'
-
-  get 'tasks/edit'
+  
 
   get "about", to: "pages#about"
   get "contact", to: "pages#contact"
@@ -12,7 +8,9 @@ Rails.application.routes.draw do
 
   get "blog", to: redirect("https://ckb-portfolio.herokuapp.com/blogs")
 
-  resources :projects
+  resources :projects do
+    resources :tasks, except: [:index], controller: 'projects/tasks'
+  end
 
   root 'pages#home'
 
