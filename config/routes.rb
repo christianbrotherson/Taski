@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'tasks/show'
+
+  get 'tasks/new'
+
+  get 'tasks/edit'
+
   get "about", to: "pages#about"
   get "contact", to: "pages#contact"
   get "error", to: "pages#error"
