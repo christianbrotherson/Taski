@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  has_many :tasks
+
   after_initialize :set_defaults
 
   validates_presence_of :title, :description, :percent_complete
