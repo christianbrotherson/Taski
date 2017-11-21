@@ -48,10 +48,10 @@ class TasksController < ApplicationController
   private
 
     def set_task
-      # TODO
+      @task = Task.find(params[:id])
     end
 
     def task_params
-      # TODO
+      params.require(:task).permit(:title, :description, :project_id, :completed, :task_file)
     end
 end
