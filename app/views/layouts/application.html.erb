@@ -3,15 +3,19 @@
   <head>
     <title>Taski</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
 
+    <div class="logo">
+      <%= image_tag("logos/logo.jpg", width: '150px') %>
+    </div>
+      
+
     <%= render "shared/nav" %>
 
     <%= yield %>
-    
+
   </body>
 </html>
