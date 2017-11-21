@@ -1,6 +1,11 @@
 @font-face {
   font-family: "Hunger Games";
   src: url('/assets/hunger_games');
+  }
+
+@font_face {
+  font_family: "Roboto Regular";
+  src: url('/assets/roboto_regular');
 }
 
 body {
@@ -13,5 +18,5 @@ h1 {
 }
 
 p {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "Roboto Regular", "Lucida Grande", sans-serif;
 }
